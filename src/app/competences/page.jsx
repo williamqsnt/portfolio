@@ -18,7 +18,7 @@ export default function Competences() {
     return(
         <Container>
             
-            <div style={{display : 'flex', alignItems :'center', justifyContent : 'center', marginTop : '35vh'}}>
+            <div style={{display : 'flex', alignItems :'center', justifyContent : 'center'}}>
                  <p style={{fontFamily : 'fantasy', color :'grey'}}>&lt;h2&gt;</p> 
                 <h2 className="mc">Mes compétences</h2>
                 <p style={{fontFamily : 'fantasy', color :'grey'}}>&lt;/h2&gt;</p>
@@ -55,7 +55,7 @@ const Container = styled.div`
     @media only screen and (max-width : 850px) {
 
         .mc{
-            font-size : 2em;
+            font-size : 1.8em;
         }
         .comp{
            img {
@@ -80,7 +80,7 @@ const Container = styled.div`
 
 
     background-color : #1b1a27;
-    height : 200vh;
+    height : 120vh;
     display : flex;
     align-items : center;
     justify-content : center;
