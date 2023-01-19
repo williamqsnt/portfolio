@@ -7,8 +7,6 @@ import notion from 'public/video/notion.mp4'
 import Competences from './competences/page'
 import { useEffect, useRef } from "react"
 import Typed from 'typed.js'
-import Projets from './projets/page'
-
 
 
 
@@ -57,7 +55,7 @@ export default function Home() {
 
       <Competences />
 
-      <Projets />
+    
 
     </Container>
   )
