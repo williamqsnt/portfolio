@@ -20,7 +20,7 @@ export default function Competences() {
             
             <div style={{display : 'flex', alignItems :'center', justifyContent : 'center', marginTop : '35vh'}}>
                  <p style={{fontFamily : 'fantasy', color :'grey'}}>&lt;h2&gt;</p> 
-                <h2>Mes compétences</h2>
+                <h2 className="mc">Mes compétences</h2>
                 <p style={{fontFamily : 'fantasy', color :'grey'}}>&lt;/h2&gt;</p>
             </div>
             <section>
@@ -53,6 +53,10 @@ const Container = styled.div`
 
 
     @media only screen and (max-width : 850px) {
+
+        .mc{
+            font-size : 2em;
+        }
         .comp{
            img {
             width : 98%;
@@ -62,8 +66,7 @@ const Container = styled.div`
         .outils{
             margin-left : unset;
             img {
-                height : 50%;
-                width : 100%;
+                display : none;
             }
         }
         

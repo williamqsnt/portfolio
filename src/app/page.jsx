@@ -66,8 +66,8 @@ export default function Home() {
 const Container = styled.div`
 
     @media only screen and (max-width : 850px){
-      img {
-        height : 20px;
+    #my-video{
+        width : 100%;
       }
     }
 
