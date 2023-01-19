@@ -1,91 +1,124 @@
+'use client'
 import Image from 'next/image'
 import { Inter } from '@next/font/google'
 import styles from './page.module.css'
+import styled from '@emotion/styled'
+import notion from 'public/video/notion.mp4'
 
-const inter = Inter({ subsets: ['latin'] })
+
+import Competences from './competences/page'
+import { useEffect, useRef } from "react"
+import Typed from 'typed.js'
+
+
+
 
 export default function Home() {
+
+
+
+  const textRef = useRef(null);
+        
+  useEffect(() => {
+    const options = {
+      strings: ['projets','idées', 'réalisations', "créations"],
+      typeSpeed: 200,
+      loop : true,
+      showCursor: false
+    }
+    const typed = new Typed(textRef.current, options);
+    return () => {
+      typed.destroy();
+    }
+  }, []);
+
+
+
+
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.jsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <Container>
+      <div className='title'>
+        <p style={{color : 'rgb(119, 180, 227)'}}>DÉVELOPPEUR REACT </p>
+      
+        <br/>
+        <h1>Le développeur web qui donnera vie à vos 
+        <div style={{height : '2em'}}>
+          <p style={{whiteSpace : 'nowrap', color : 'rgb(252,187,180)'}} ref={textRef}></p>
+        </div></h1>
+        <div style={{ display : 'flex', alignItems : 'center', justifyContent : 'center'}}>
+          <p style={{margin : '1em 2em'}}>"Développeur web spécialisé dans la création de sites web React. je suis capable de créer des sites web modernes, réactifs et performants.
+           Je m'assure que chaque site web que je crée soit optimisé pour les moteurs de recherche et facile à utiliser pour les utilisateurs.
+            Mon objectif est de créer des sites web qui non seulement répondent aux besoins de mes clients, mais qui les dépassent."</p>
         </div>
+
+        <a href="mailto:quesnot.william@hotmail.com">Collaborez dès maintenant</a>
+
+        <video src={notion} autoPlay muted loop id="my-video" />        
       </div>
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-        <div className={styles.thirteen}>
-          <Image src="/thirteen.svg" alt="13" width={40} height={31} priority />
-        </div>
-      </div>
+      <Competences />
 
-      <div className={styles.grid}>
-        <a
-          href="https://beta.nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+    </Container>
   )
 }
+
+
+
+
+const Container = styled.div`
+
+    @media only screen and (max-width : 850px){
+      img {
+        height : 20px;
+      }
+    }
+
+    .title {
+      margin-top : 5em;
+      display : flex;
+      align-items : center;
+      justify-content:  center;
+      flex-direction : column;
+      height : 90vh;
+    }
+
+    p{
+      font-weight : 400;
+      text-align : center;
+    }
+
+    h1{
+      color : rgb(51,51,51);
+      font-size : 2.5em;
+      margin-left : auto;
+      margin-right : auto;
+      margin : 0.5em;
+      text-align : center;
+    }
+
+    video {
+      border-radius : 10px;
+      box-shadow : 0px 0px 1em grey;
+      width : 100vh;
+      position : relative;
+      top : 100px;
+    }
+
+    a {
+      padding : 1em 2em;
+      font-size : 1.25em;
+      background-color : rgb(185, 219, 237);
+      border : none;
+      transition : 0.2s;
+      cursor : pointer;
+      border-radius : 5px;
+      box-shadow : 2px 4px 0.5em lightgrey;
+      margin : 1em;
+      font-weight : 500;
+
+      :hover{
+        background-color : rgb(119, 180, 227);
+      }
+    }
+
+`
