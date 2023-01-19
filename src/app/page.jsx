@@ -7,6 +7,7 @@ import notion from 'public/video/notion.mp4'
 import Competences from './competences/page'
 import { useEffect, useRef } from "react"
 import Typed from 'typed.js'
+import Projets from './projets/page'
 
 
 
@@ -41,7 +42,7 @@ export default function Home() {
         <br/>
         <h1>Le développeur web qui donnera vie à vos 
         <div style={{height : '2em'}}>
-          <p style={{whiteSpace : 'nowrap', color : 'rgb(252,187,180)'}} ref={textRef}></p>
+          <p style={{whiteSpace : 'nowrap', color : 'rgb(46, 137, 186)'}} ref={textRef}></p>
         </div></h1>
         <div className="desc" style={{ display : 'flex', alignItems : 'center', justifyContent : 'center'}}>
           <p className="descp"style={{margin : '0em 2em'}}>Développeur web spécialisé dans la création de sites web React. je suis capable de créer des sites web modernes, réactifs et performants.
@@ -55,6 +56,8 @@ export default function Home() {
       </div>
 
       <Competences />
+
+      <Projets />
 
     </Container>
   )

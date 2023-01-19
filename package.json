@@ -20,6 +20,8 @@
     "react-device-detect": "^2.2.2",
     "react-dom": "18.2.0",
     "react-gsap-enhancer": "^0.3.0",
+    "react-slick": "^0.29.0",
+    "slick-carousel": "^1.8.1",
     "typed.js": "^2.0.12",
     "typewriter-effect": "^2.19.0"
   },

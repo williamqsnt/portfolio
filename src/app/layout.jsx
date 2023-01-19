@@ -12,7 +12,7 @@ export default function RootLayout({ children }) {
       <body>
 
        <NavBar />
-        <div style={{height :"20vh"}}></div>
+        <div style={{height :"10vh"}}></div>
         {children}
         
         </body>

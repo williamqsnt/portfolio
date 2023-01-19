@@ -17,7 +17,7 @@ export default function NavBar() {
            
             <div>
                 <button>
-                    <p style={{fontSize : '1.5em'}}>Menu</p>
+                    <p style={{fontSize : '1.5em', color : 'black'}}>Menu</p>
                     <Image src={menu} alt="icon menu" width={35}/>
                 </button>
             </div>
