@@ -1,7 +1,5 @@
 'use client'
-import Image from 'next/image'
-import { Inter } from '@next/font/google'
-import styles from './page.module.css'
+
 import styled from '@emotion/styled'
 import notion from 'public/video/notion.mp4'
 
@@ -46,9 +44,9 @@ export default function Home() {
           <p style={{whiteSpace : 'nowrap', color : 'rgb(252,187,180)'}} ref={textRef}></p>
         </div></h1>
         <div style={{ display : 'flex', alignItems : 'center', justifyContent : 'center'}}>
-          <p style={{margin : '1em 2em'}}>"Développeur web spécialisé dans la création de sites web React. je suis capable de créer des sites web modernes, réactifs et performants.
-           Je m'assure que chaque site web que je crée soit optimisé pour les moteurs de recherche et facile à utiliser pour les utilisateurs.
-            Mon objectif est de créer des sites web qui non seulement répondent aux besoins de mes clients, mais qui les dépassent."</p>
+          <p style={{margin : '1em 2em'}}>Développeur web spécialisé dans la création de sites web React. je suis capable de créer des sites web modernes, réactifs et performants.
+           Je m&lsquo;assure que chaque site web que je crée soit optimisé pour les moteurs de recherche et facile à utiliser pour les utilisateurs.
+            Mon objectif est de créer des sites web qui non seulement répondent aux besoins de mes clients, mais qui les dépassent</p>
         </div>
 
         <a href="mailto:quesnot.william@hotmail.com">Collaborez dès maintenant</a>
